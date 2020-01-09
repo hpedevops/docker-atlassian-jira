@@ -7,7 +7,7 @@ ENV JIRA_VERSION  8.6.0
 
 RUN apk add shadow
 RUN /usr/sbin/groupadd -g 1000520000 jira
-RUN /usr/sbin/useradd -s /bin/sh -g 1000520000 -u 1000520000 jira
+RUN /usr/sbin/useradd -s /bin/sh -g 1000520000 -u 1000520000 --no-log-init jira jira
 
 # Install Atlassian JIRA and helper tools and setup initial home
 # directory structure.
